@@ -31,6 +31,18 @@ services:
         networks: 
             extnetwork:
                 ipv4_address: 172.18.0.3
+    redis28:
+        image: redis:2.8
+        container_name: redis28
+        ports:
+            - '6381:6379'
+        command: redis-server /etc/redis/redis.conf --appendonly yes
+        volumes: 
+            - d:\Docker\redis28\redis.conf:/etc/redis/redis.conf
+            - d:\Docker\redis28\data:/data
+        networks: 
+            extnetwork:
+                ipv4_address: 172.18.0.4
     redis32:
         image: redis:3.2
         container_name: redis32
@@ -42,7 +54,7 @@ services:
             - d:\Docker\redis32\data:/data
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.4
+                ipv4_address: 172.18.0.5
     mongo:
         image: mongo:3.4
         container_name: mongo
@@ -50,7 +62,7 @@ services:
             - '27017:27017'
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.5
+                ipv4_address: 172.18.0.6
     phpfpm54:
         # image: php:5.4-fpm
         image: 1758677739/phpfpm:5.4
@@ -63,7 +75,7 @@ services:
             - d:\Docker\logs:/var/log
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.6
+                ipv4_address: 172.18.0.7
     phpfpm55:
         # image: php:5.5-fpm
         image: 1758677739/phpfpm:5.5
@@ -76,7 +88,7 @@ services:
             - d:\Docker\logs:/var/log
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.7
+                ipv4_address: 172.18.0.8
     phpfpm56:
         # image: php:5.6-fpm
         image: 1758677739/phpfpm:5.6
@@ -89,7 +101,7 @@ services:
             - d:\Docker\logs:/var/log
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.8
+                ipv4_address: 172.18.0.9
     phpfpm73:
         # image: php:7.3-fpm
         image: 1758677739/phpfpm:7.3
@@ -102,7 +114,7 @@ services:
             - d:\Docker\logs:/var/log
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.9
+                ipv4_address: 172.18.0.10
     nginx:
         image: nginx
         container_name: nginx
@@ -125,4 +137,4 @@ services:
             - d:\Docker\logs\nginx:/var/log/nginx
         networks: 
             extnetwork:
-                ipv4_address: 172.18.0.10
+                ipv4_address: 172.18.0.11
