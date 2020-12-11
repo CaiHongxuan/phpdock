@@ -120,7 +120,7 @@ services:
         image: 1758677739/phpfpm:7.1
         container_name: phpfpm71
         ports:
-            - '9000:9000'
+            - '9071:9000'
         volumes:
             - d:\Docker\www:/var/www/html
             - d:\Docker\php-fpm71:/usr/local/etc/php
