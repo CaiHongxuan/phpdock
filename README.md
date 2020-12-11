@@ -5,7 +5,7 @@ The PHP development for Docker.
 - Nginx（1.17.9）
 - Mysql（5.6.40）
 - MongoDB（3.4）
-- PHP-FPM（5.4、5.5、5.6、7.3）
+- PHP-FPM（5.4、5.5、5.6、7.0、7.1、7.2、7.3、7.4）
 - Rdis（2.6、2.8、3.2）
 
 # 运行
@@ -42,7 +42,27 @@ php-fpm56
         docker-php-ext-bcmath.ini
         ...
     php.ini
+php-fpm70
+    conf.d
+        docker-php-ext-bcmath.ini
+        ...
+    php.ini
+php-fpm71
+    conf.d
+        docker-php-ext-bcmath.ini
+        ...
+    php.ini
+php-fpm72
+    conf.d
+        docker-php-ext-bcmath.ini
+        ...
+    php.ini
 php-fpm73
+    conf.d
+        docker-php-ext-bcmath.ini
+        ...
+    php.ini
+php-fpm74
     conf.d
         docker-php-ext-bcmath.ini
         ...
