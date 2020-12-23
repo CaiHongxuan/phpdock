@@ -176,7 +176,11 @@ services:
             - phpfpm54
             - phpfpm55
             - phpfpm56
+            - phpfpm70
+            - phpfpm71
+            - phpfpm72
             - phpfpm73
+            - phpfpm74
         links:
             - phpfpm54
             - phpfpm55
